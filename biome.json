@@ -1,0 +1,44 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "style": {
+        "useImportType": "off",
+        "noNonNullAssertion": "warn"
+      },
+      "correctness": {
+        "useExhaustiveDependencies": {
+          "level": "warn",
+          "options": {
+            "hooks": [
+              {
+                "name": "useAsyncEffect",
+                "closureIndex": 0,
+                "dependenciesIndex": 1,
+                "stableResult": true
+              }
+            ]
+          }
+        },
+        "noUnusedImports": "error"
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "semicolons": "always",
+      "quoteStyle": "double",
+      "bracketSameLine": true
+    }
+  },
+  "files": {
+    "ignore": [
+      "supabase/functions/**/*.{ts,js}"
+    ]
+  },
+  "organizeImports": {
+    "enabled": true,
+    "ignore": ["supabase/functions/**/*.{ts,js}"]
+  }
+}

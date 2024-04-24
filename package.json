@@ -1,0 +1,28 @@
+{
+  "name": "cgp-book-scraper",
+  "module": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun src/index.ts",
+    "check": "biome check src/",
+    "fix": "biome check --apply src/",
+    "fix-unsafe": "biome check --apply-unsafe src/"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.7.1",
+    "@types/await-timeout": "^0.3.3",
+    "@types/bun": "latest",
+    "@types/death": "^1.1.5"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "await-timeout": "^1.1.1",
+    "death": "^1.1.0",
+    "puppeteer": "^22.7.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-adblocker": "^2.13.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  }
+}
